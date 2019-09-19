@@ -1,0 +1,14 @@
+{
+  "name": "chamu_official_website",
+  "version": "1.0.1",
+  "description": "查姆官方网站",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "查姆信息"
+  ],
+  "author": "ohhoney",
+  "license": "ISC"
+}
