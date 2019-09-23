@@ -1,0 +1,97 @@
+.page_home>div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.system,
+.cloud-clinic {
+    background: linear-gradient(180deg, rgba(161, 196, 253, 1) 0%, rgba(194, 233, 251, 1) 100%);
+}
+
+.page_home h2 {
+    font-size: 48px;
+    color: #000000;
+}
+
+.page_home p {
+    font-size: 20px;
+    color: #333333;
+    max-width: 341px;
+    margin: 20px 0 27px;
+}
+
+.page_home a {
+    color: #007AFF;
+    font-size: 20px;
+}
+
+.page_home .erp {
+    padding: 1.08rem 0 .14rem 1.2rem;
+    justify-content: space-between;
+    align-items: flex-start;
+    background: no-repeat center/100% url('../../assets/images/pageImg.png');
+}
+
+.page_home .erp >div {
+    margin: .66rem 0 0;
+}
+
+.page_home .instrument {
+    padding: .6rem 1.3rem .6rem 1.2rem;
+}
+
+.page_home .system {
+    padding: .6rem 1.2rem .6rem 1.3rem;
+}
+
+.page_home .logistics {
+    padding: .7rem 2.33rem .76rem 1.53rem;
+}
+
+.page_home .cloud-clinic {
+    padding: .42rem 0;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.erp img {
+    width: 8.53rem;
+    height: 5.69rem;
+}
+
+.instrument img {
+    width: 7.4rem;
+    height: 5rem;
+    margin: 0 1.09rem 0 0;
+}
+
+.system img {
+    width: 7.44rem;
+    height: 4.99rem;
+    margin: 0 0 0 1.05rem;
+}
+
+.logistics img {
+    width: 5.08rem;
+    height: 4.74rem;
+    margin: 0 2.05rem 0 0;
+}
+
+
+.page_home .cloud-clinic>div {
+    align-self: stretch;
+    text-align: center;
+}
+
+.page_home .cloud-clinic p {
+    max-width: 5.3rem;
+    margin: .1rem auto .15rem;
+}
+
+.cloud-clinic img {
+    width: 11.12rem;
+    height: auto;
+    margin: .32rem 0 0;
+}

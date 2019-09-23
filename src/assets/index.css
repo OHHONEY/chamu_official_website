@@ -1,0 +1,138 @@
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li,
+input {
+    padding: 0;
+    margin: 0;
+    font-weight: normal;
+    box-sizing: border-box;
+}
+
+h5 {
+    font-weight: 400;
+    font-size: 20px;
+    color: #FFFFFF;
+}
+
+a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+}
+
+input {
+    background-color: transparent;
+    border: 1px solid #DDE1E3;
+    padding: 0 16px;
+}
+
+input::placeholder {
+    color: #7A8C94;
+    font-size: 14px;
+}
+
+button {
+    background-color: transparent;
+    border: 1px solid #EBEDEF;
+    color: #FFFFFF;
+    font-size: 14px;
+}
+/* 1vw = 14.4px */
+/* 7vw = 100.8px = 1rem */
+/* 约等于 1rem = 100px */
+html {
+    font-size: 7vw;
+}
+
+.site-header {
+    height: .66rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1.17rem 0 1.21rem;
+}
+
+.site-header img {
+    width: 1.26rem;
+    height: .36rem;
+}
+
+.site-header li {
+    width: 114px;
+    color: #666666;
+    font-size: 16px;
+    text-align: center;
+}
+
+.site-header a {
+    color: inherit;
+}
+
+.site-footer {
+    background: #014A6D;
+    padding: .42rem 2rem 0;
+}
+
+.site-header h5 {
+    margin: 0 0 .31rem;
+}
+
+.site-footer p {
+    font-size: 16px;
+    color: #EBEDEF;
+    margin: .28rem 0;
+    font-weight: 300;
+}
+
+.site-footer>div {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.site-footer input {
+    display: block;
+    width: 4.80rem;
+    height: 48px;
+    margin: .24rem 0;
+}
+
+.site-footer button {
+    display: block;
+    width: 2.4rem;
+    line-height: 48px;
+    font-size: 14px;
+    margin: .24rem 0 .42rem;
+}
+
+
+.site-footer ul {
+    display: flex;
+    font-size: 14px;
+    color: #FFFFFF;
+    margin: 0 -80px 0;
+    line-height: .76rem;
+}
+
+.site-footer li {
+    margin-right: 30px;
+}
+
+.site-footer ul li:nth-of-type(1) {
+    flex-grow: 1;
+}
+
+.site-footer li:last-of-type {
+    margin-right: 0;
+}
