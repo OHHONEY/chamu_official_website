@@ -12,6 +12,10 @@ let Header = document.getElementsByTagName('header')[0],
 Header.innerHTML = header
 Footer.innerHTML = footer
 
+document.querySelector('.site-header img').addEventListener('click', () =>{
+    router.go('/about')
+})
+
 document.getElementById('about-link').addEventListener('click', () =>{
     router.go('/about')
 })

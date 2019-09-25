@@ -7,9 +7,9 @@ class Router {
         })
 
         // 本地文件
-        if (/file/.test(location.href)) this.load('/home')
+        if (/file/.test(location.href)) this.load('/')
         else this.load(location.pathname)
-        
+
     }
 
     // erp
@@ -19,7 +19,7 @@ class Router {
         else if (params) path += `?title=${params}`
 
         try {
-            history.pushState({}, '', path)  
+            history.pushState({}, '', path)
             this.load(path, params)
         } catch (error) {
             // console.error()
@@ -31,11 +31,17 @@ class Router {
     // 打开本地文件时如何载入
     load(path) {
         console.log(path)
-        if (path === '/') path = '/home'
+        if (path === '/') {
+            const view = new(routes('/home'))()
+            view.mount(document.getElementById('site-page-content'))
+        }
         // else if (/title/.test(path)) path = '/about/news'
         // console.log(path.replace(/\?.*$/, ''))
-        const view = new routes[path.replace(/\?.*$/, '')]()
-        view.mount(document.getElementById('site-page-content'))
+        // const view = new routes[path.replace(/\?.*$/, '')]()
+        else routes(path.replace(/\?.*$/, '')).then(module => {
+            const view = new module.default()
+            view.mount(document.getElementById('site-page-content'))
+        })
     }
 }
 

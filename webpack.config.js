@@ -11,10 +11,11 @@ module.exports = {
         app: './src/index.js'
     },
     output: {
-        filename: '[name].bundle.js',
+        filename: '[name].[hash].bundle.js',
         path: path.resolve(__dirname, 'dist')
     },
     devServer: {
+        useLocalIp: true,
         contentBase: './dist',
         hot: true
     },
@@ -24,18 +25,20 @@ module.exports = {
         new HtmlWebpackPlugin({
             title: '查姆信息',
             template: './src/index.html'
-        }),
-        new HtmlWebpackPlugin({
-            title: '关于我们',
-            filename: './components/about/about.html'
-        }),
+        })
     ],
     module: {
         rules: [{
             test: /\.css$/,
             use: [
                 'style-loader',
-                'css-loader'
+                {
+                    loader: 'css-loader',
+                    options: {
+                        importLoaders: 1
+                    }
+                },
+                'postcss-loader'
             ]
         }, {
             test: /\.(png|svg|jpg|gif)$/,

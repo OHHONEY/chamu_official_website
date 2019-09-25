@@ -29,7 +29,7 @@
     justify-content: center;
 }
 
-.about-news-list ul li{
+.about-news-list ul li {
     width: 5.5rem;
     height: 175px;
     padding: 22px 30px 0;
@@ -56,7 +56,7 @@ ul h5 {
     margin: .12rem 0 .6rem;
 }
 
-.pagination ul{
+.pagination ul {
     display: flex;
     justify-content: center;
 }
@@ -79,4 +79,27 @@ ul h5 {
 ul a {
     font-size: 14px;
     color: #8A8A8A;
+}
+
+@media (max-width: 768px) {
+    .about-title p {
+        font-size: 12px;
+    }
+
+    .about-title {
+        padding: 1rem .6rem;
+        height: auto;
+        line-height: 1;
+        background: linear-gradient(180deg, rgba(161, 196, 253, 1) 0%, rgba(194, 233, 251, 1) 100%);
+    }
+
+    .about-news-list ul li {
+        width: 75vw;
+        margin: 0 0 20px !important;
+    }
+
+    .pagination ul li {
+        width: 20px;
+        line-height: 20px;
+    }
 }

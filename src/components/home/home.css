@@ -1,8 +1,26 @@
 .page_home>div {
+    position: relative;
     display: flex;
     align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
+    /* justify-content: center; */
+    box-sizing: content-box;
+}
+
+.page_home>div>img {
+    position: absolute;
+}
+
+.page_home>div>div {
+    position: relative;
+    z-index: 1;
+}
+
+.page_home h1 {
+    color: #000000;
+}
+
+.page_home h2 {
+    color: #007AFF;
 }
 
 .system,
@@ -10,16 +28,29 @@
     background: linear-gradient(180deg, rgba(161, 196, 253, 1) 0%, rgba(194, 233, 251, 1) 100%);
 }
 
-.page_home h2 {
-    font-size: 48px;
-    color: #000000;
-}
-
 .page_home p {
     font-size: 20px;
-    color: #333333;
-    max-width: 341px;
+    max-width: 3.41rem;
     margin: 20px 0 27px;
+}
+
+.erp p {
+    margin: 0;
+}
+
+.erp .erp-description {
+    color: #8E93BC;
+    font-size: 18px;
+    margin: .1rem 0 .35rem;
+}
+
+.erp-description::after {
+    content: '';
+    display: block;
+    height: 4px;
+    width: .64rem;
+    background: #3CB379;
+    margin: .2rem 0 0;
 }
 
 .page_home a {
@@ -27,58 +58,92 @@
     font-size: 20px;
 }
 
+.erp a {
+    display: inline-block;
+    padding: .13rem .32rem;
+    color: #FFFFFF;
+    background: #007AFF;
+    border-radius: .06rem;
+    font-size: 16px;
+}
+
+.erp a:hover {
+    /*  */
+    background-color: #2268D5;
+}
+
 .page_home .erp {
+    position: relative;
     padding: 1.08rem 0 .14rem 1.2rem;
     justify-content: space-between;
     align-items: flex-start;
     background: no-repeat center/100% url('../../assets/images/pageImg.png');
+    box-sizing: content-box;
+    min-height: 5.69rem;
 }
 
-.page_home .erp >div {
+.page_home .erp>div {
     margin: .66rem 0 0;
+    position: relative;
+    z-index: 1;
 }
 
 .page_home .instrument {
     padding: .6rem 1.3rem .6rem 1.2rem;
+    min-height: 5rem;
+    justify-content: flex-end;
+
 }
 
 .page_home .system {
     padding: .6rem 1.2rem .6rem 1.3rem;
+    min-height: 4.99rem;
 }
 
 .page_home .logistics {
     padding: .7rem 2.33rem .76rem 1.53rem;
+    min-height: 4.74rem;
+    justify-content: flex-end;
 }
 
 .page_home .cloud-clinic {
     padding: .42rem 0;
+    min-height: 3.39rem;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .erp img {
     width: 8.53rem;
     height: 5.69rem;
+    position: absolute;
+    right: 0;
+    top: 1.08rem;
 }
 
 .instrument img {
+    top: .6rem;
+    left: 1.2rem;
     width: 7.4rem;
     height: 5rem;
-    margin: 0 1.09rem 0 0;
+    /* margin: 0 1.09rem 0 0; */
 }
 
 .system img {
+    top: .6rem;
+    right: 1.2rem;
     width: 7.44rem;
     height: 4.99rem;
     margin: 0 0 0 1.05rem;
 }
 
 .logistics img {
+    top: .7rem;
+    left: 1.53rem;
     width: 5.08rem;
     height: 4.74rem;
     margin: 0 2.05rem 0 0;
 }
-
 
 .page_home .cloud-clinic>div {
     align-self: stretch;
@@ -94,4 +159,93 @@
     width: 11.12rem;
     height: auto;
     margin: .32rem 0 0;
+}
+
+.page_home .cloud-clinic img {
+    position: relative;
+}
+
+@media (max-width: 768px) {
+
+    .page_home a {
+        font-size: 16px;
+    }
+
+    .page_home p {
+        font-size: 14px;
+        margin: 16px 0 20px;
+        max-width: 188px;
+    }
+
+    .erp .erp-description {
+        font-size: 12px;
+    }
+
+    .erp a {
+        /* width: 64px;
+        line-height: 24px; */
+        font-size: 12px;
+        border-radius: 4px;
+    }
+
+    .erp img {
+        width: 6rem;
+        height: auto;
+        top: auto;
+        bottom: 1rem;
+    }
+
+    .page_home .erp>div {
+        margin: .6rem 0 0;
+        position: relative;
+        z-index: 1;
+    }
+
+    .page_home>div>img {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .instrument img {
+        left: .6rem;
+        width: 5rem;
+        height: auto;
+    }
+
+    .page_home .instrument {
+        padding: .6rem .6rem;
+    }
+
+    .system img {
+        right: .6rem;
+        width: 6rem;
+        height: auto;
+    }
+
+    .page_home .system {
+        padding: .6rem;
+    }
+
+    .logistics img {
+        left: .6rem;
+        width: 5rem;
+        height: auto;
+    }
+
+    .page_home .logistics {
+        padding: .6rem;
+    }
+
+    .page_home .cloud-clinic {
+        padding: .6rem;
+    }
+
+    .page_home .cloud-clinic p {
+        max-width: 100%;
+    }
+
+    .page_home .cloud-clinic img {
+        transform: translate(0, 0)
+    }
+
 }

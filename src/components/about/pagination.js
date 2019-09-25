@@ -1,14 +1,10 @@
-function updatePage(page) {
-    let liList = document.getElementById('pagination').getElementsByTagName('li')
-    for (let i = 0; i < liList.length; i++) {        
-    }
-    console.log(liList)
-}
+import updatePage from './updatePage'
 
 export default function (length) {
     let ul = document.createElement('ul'),
         initPage = 1
     while (length) {
+        let currentPage = initPage
         let li = document.createElement('li'),
             p = document.createElement('p'),
             a = document.createElement('a')
@@ -17,15 +13,19 @@ export default function (length) {
         a.href = 'javascript:'
         // 添加监听
         a.innerText = initPage
-        a.addEventListener('click', () =>{
-            updatePage(initPage)
-        })
         p.appendChild(a)
         li.appendChild(p)
         ul.appendChild(li)
-        initPage ++
-        length -- 
+        a.addEventListener('click', () => {
+            updatePage(currentPage)
+            // 移除类
+            if (document.querySelector('.active-page')) document.querySelector('.active-page').classList.remove('active-page')
+            // 添加类
+            li.classList.add('active-page')
+        })
+        initPage++
+        length--
     }
-    
+
     return ul
 }
