@@ -63,7 +63,7 @@
     box-sizing: border-box;
     padding: .8rem 0 0;
     text-align: center;
-    background: url('../../../assets/images/problemImg.png') no-repeat center/100%;
+    background: url('../../assets/images/problemImg.png') no-repeat center/100%;
 }
 
 .instryments-solution>h6 {

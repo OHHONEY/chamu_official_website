@@ -2,13 +2,11 @@ import routes from './routes/routes'
 
 class Router {
     start() {
-        window.addEventListener('popstate', () => {
-            this.load(location.pathname)
-        })
+        window.addEventListener('popstate', this.back)
 
         // 本地文件
-        if (/file/.test(location.href)) this.load('/')
-        else this.load(location.pathname)
+        // if (/file/.test(location.href)) this.load('/')
+        // else this.load(location.pathname)
 
     }
 
@@ -31,7 +29,8 @@ class Router {
     // 打开本地文件时如何载入
     load(path) {
         console.log(path)
-        if (path === '/') {
+        // if (path === '/') {
+        if (/\/$/.test(path)) {
             const view = new(routes('/home'))()
             view.mount(document.getElementById('site-page-content'))
         }
@@ -42,6 +41,29 @@ class Router {
             const view = new module.default()
             view.mount(document.getElementById('site-page-content'))
         })
+    }
+
+    back() {
+        // 根据location.pathname
+        window.location.reload()
+        window.removeEventListener('popstate', this.back)
+    }
+
+    skip(path, param) {
+        // #path?title
+        // #path
+        try {
+            history.pushState({}, '', `#${path}${param ? '?' + param : ''}`)
+            routes(path).then(module => {
+                const view = new module.default()
+                view.mount(document.getElementById('site-page-content'))
+            })
+        } catch (error) {
+            routes(path).then(module => {
+                const view = new module.default()
+                view.mount(document.getElementById('site-page-content'))
+            })
+        }
     }
 }
 

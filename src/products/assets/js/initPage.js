@@ -1,5 +1,4 @@
-import template from './erp.html'
-import './assets/index.css'
+import template from '../../components/index.html'
 
 import switchTab from './switchTab'
 
@@ -68,7 +67,9 @@ function divAnimation() {
     }
 }
 
+
 export default class {
+
     mount(container, pageKey) {
         this.instrumentVisit = 0
         this.warehousingVisit = 0
@@ -132,5 +133,4 @@ export default class {
             this.logisticsVisit++
         })
     }
-
 }

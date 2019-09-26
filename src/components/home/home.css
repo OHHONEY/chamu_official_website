@@ -114,11 +114,13 @@
 }
 
 .erp img {
-    width: 8.53rem;
-    height: 5.69rem;
+    width: 6.63rem;
+    height: auto;
     position: absolute;
     right: 0;
     top: 1.08rem;
+    transform: translate(0, 0);
+    animation: upDown 5s linear 1s infinite;
 }
 
 .instrument img {
@@ -165,6 +167,37 @@
     position: relative;
 }
 
+@keyframes upDown {
+    0% {
+        transform: translate(0, 0)
+    }
+
+    25% {
+        transform: translate(0, -.3rem)
+    }
+
+    28% {
+        transform: translate(0, -.3rem)
+    }
+
+    50% {
+        transform: translate(0, 0)
+    }
+
+    75% {
+        transform: translate(0, .25rem)
+    }
+
+    80% {
+        transform: translate(0, .25rem)
+    }
+
+    100% {
+        transform: translate(0, 0)
+    }
+
+}
+
 @media (max-width: 768px) {
 
     .page_home a {
@@ -188,7 +221,7 @@
         border-radius: 4px;
     }
 
-    .erp img {
+    .page_home .erp img {
         width: 6rem;
         height: auto;
         top: auto;

@@ -1,0 +1,27 @@
+.news-content {
+    padding: 0 2.2rem;
+    margin: 2px 0 28px;
+}
+
+.news-content p {
+    margin: .3rem 0;
+    text-indent: 24px;
+}
+
+.news-title {
+    background: -webkit-linear-gradient(top, #A1C4FD, #C2E9FB);
+    padding: .63rem 0;
+    text-align: center;
+}
+
+.news-title h6 {
+    font-size: 16px;
+    color: #364146;
+    margin: .22rem;
+}
+
+@media (max-width: 768px) {
+    .news-content {
+        padding: 0 .6rem;
+    }
+}

@@ -1,0 +1,162 @@
+
+.page-title p {
+    color: #666666;
+    font-size: 14px;
+    max-width: 4.5rem;
+    margin: 20px 0 0;
+}
+
+.page-title div{
+    display: inline-block;
+    vertical-align: text-top;
+}
+
+.title-text {
+    margin: 20px 0.73rem 0 0;
+}
+
+.page-title img {
+    width: 6.67rem;
+    height: 2.04rem;
+}
+
+.page-title {
+    padding: 0.96rem 0 0.50rem 1.3rem;
+    background: linear-gradient(180deg, rgba(161, 196, 253, 1) 0%, rgba(194, 233, 251, 1) 100%);
+    /* background-image: url('../home/assets/cloud-clinic.png');
+    background-size: 6.67rem 2.04rem;
+    background-repeat: no-repeat;
+    background-position: 0.96rem 6.53rem; */
+}
+
+.cloud-clinic-problem, .cloud-clinic-solution {
+    padding: .8rem 0 1rem;
+    text-align: center;
+}
+
+.cloud-clinic-problem {
+    background: url('./images/problemImg.png') no-repeat center;
+    background-size: 100%;
+}
+
+.cloud-clinic-problem > div {
+    display: flex;
+    margin: .6rem 0 0;
+    padding: 0 1.2rem 0;
+}
+
+.cloud-clinic-problem > div > div {
+    margin-right: .75rem;
+}
+
+.cloud-clinic-problem > div > div:last-of-type {
+    margin-right: 0;
+}
+
+.cloud-clinic-problem h6 {
+    margin: 0 0 20px;
+    font-weight: 500;
+}
+
+.cloud-clinic-problem p {
+    line-height: 1.75;
+}
+
+
+.cloud-clinic-solution {
+    padding: .8rem 0 1.2rem;
+}
+
+.cloud-clinic-solution > div {
+    display: flex;
+    justify-content: center;
+    margin: 35px 0 0;
+}
+
+.cloud-clinic-solution > div > div {
+    width: 2.85rem;
+    height: 2.98rem;
+    box-shadow:0px 8px 16px 0px rgba(0,0,0,0.1);
+    margin-right: 20px;
+    padding: 0 .4rem 0;
+    box-sizing: border-box;
+}
+
+.lightweight {
+    background: url('./images/ui.png') no-repeat center .56rem;
+    background-size: .44rem auto;
+}
+
+.convenient {
+    background: url('./images/om.png') no-repeat center .56rem;
+    background-size: .44rem auto;
+}
+
+.dispatch-free {
+    background: url('./images/bm.png') no-repeat center .56rem;
+    background-size: .44rem auto;
+}
+
+.unified-management {
+    background: url('./images/rule.png') no-repeat center .56rem;
+    background-size: .44rem auto;
+}
+
+.cloud-clinic-solution > div > div:last-of-type {
+    margin-right: 0;
+}
+
+.cloud-clinic-solution h6 {
+    margin: 1.29rem 0 .2rem;
+}
+
+@media (max-width: 768px) {
+    .page-title {
+        padding: 0.96rem .6rem 0.50rem;
+    }
+
+    .title-text {
+        margin: 0 0 20px;
+    }
+    .page-title div{
+        display: block;
+        text-align: center;
+    }
+
+    .page-title p {
+        max-width: none;
+    }
+
+    .cloud-clinic-problem {
+        background: none;
+    }
+
+    .cloud-clinic-problem > div {
+        flex-wrap: wrap;
+    }
+
+    .cloud-clinic-problem h6 {
+        margin: 20px 0 10px;
+    }
+
+    .cloud-clinic-solution > div {
+        flex-wrap: wrap;
+    }
+
+    .cloud-clinic-solution > div > div {
+        width: 75vw;
+        height: auto;
+        margin: 0 0 20px 0;
+        padding: 0 10px 20px;
+    }
+
+    .lightweight, .convenient, .dispatch-free, .unified-management {
+        background-size: 20px auto;
+    }
+
+    .cloud-clinic-solution h6 {
+        margin: 50px 0 10px;
+    }
+}
+
+

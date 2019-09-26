@@ -59,6 +59,7 @@ input {
     border: 1px solid #DDE1E3;
     padding: 0 16px;
     color: #FFFFFF;
+    font-size: 14px;
 }
 
 input::placeholder {
@@ -69,12 +70,6 @@ input::placeholder {
 :focus {
     outline: none;
 }
-
-input:focus {
-    /* outline: 1px solid # */
-}
-
-
 
 button {
     background-color: transparent;
@@ -111,6 +106,10 @@ html {
     height: auto;
 }
 
+.site-header img:hover {
+    cursor: pointer;
+}
+
 .site-header li {
     width: 114px;
     color: #666666;
@@ -120,6 +119,10 @@ html {
 
 .site-header a {
     color: inherit;
+}
+
+.site-header a:hover {
+    color: #007AFF;
 }
 
 .site-footer {
