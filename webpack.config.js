@@ -16,6 +16,11 @@ module.exports = {
         filename: '[name].[hash].bundle.js',
         path: path.resolve(__dirname, 'dist')
     },
+    optimization: {
+        splitChunks: {
+            chunks: 'all'
+        }
+    },
     devServer: {
         useLocalIp: true,
         contentBase: './dist',
@@ -41,10 +46,18 @@ module.exports = {
             template: './src/index.html',
             chunks: ['aboutCham']
         })
-
     ],
     module: {
         rules: [{
+            test: /\.m?js$/,
+            exclude: /(node_modules|bower_components)/,
+            use: {
+                loader: 'babel-loader',
+                options: {
+                    presets: ['@babel/preset-env']
+                }
+            }
+        }, {
             test: /\.css$/,
             use: [
                 'style-loader',
