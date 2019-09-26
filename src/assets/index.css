@@ -92,46 +92,46 @@ html {
 }
 
 .site-header {
-    height: .66rem;
-    min-height: 60px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 1.17rem 0 1.21rem;
 }
 
-.site-header img {
+.site-header > a {
+    display: block;
     width: 1.26rem;
-    min-width: 100px;
-    height: auto;
+    align-self: stretch;
+    background: url('../assets/images/logo.png') no-repeat center;
+    background-size: 100% auto;
 }
 
-.site-header img:hover {
-    cursor: pointer;
-}
-
-.site-header li {
+.large-screen-nav li {
+    line-height: .66rem;
+    height: .66rem;
     width: 114px;
     color: #666666;
     font-size: 16px;
     text-align: center;
+    box-sizing: border-box;
+}
+
+.large-screen-nav li:hover{
+    border-bottom: 2px solid #007AFF;
+    color: #007AFF;
+}
+
+.small-screen-nav {
+    display: none;
 }
 
 .site-header a {
     color: inherit;
 }
 
-.site-header a:hover {
-    color: #007AFF;
-}
-
 .site-footer {
     background: #014A6D;
     padding: .42rem 2rem 0;
-}
-
-.site-header h5 {
-    margin: 0 0 .31rem;
 }
 
 .site-footer p {
@@ -214,12 +214,70 @@ html {
         font-size: 12px;
     }
 
-    nav {
-        display: none;
+    header {
+        height: 2.4rem;
     }
 
     .site-header {
         padding: 0 .6rem;
+        height: 2.4rem;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 3;
+        background: #FFFFFF;
+        box-sizing: border-box;
+    }
+
+    .site-header > a {
+        width: 100px;
+    }
+
+    .large-screen-nav {
+        display: none;
+    }
+
+    .small-screen-nav {
+        display: block;
+    }
+
+    .small-screen-nav img {
+        width: .76rem;
+        height: auto;
+    }
+
+    .small-screen-nav nav {
+        position: absolute;
+        overflow: hidden;
+        width: 100vw;
+        top: 2.4rem;
+        height: 0;
+        left: 0;
+    }
+
+    .small-screen-nav .visibleNav {
+        height: 100vh;
+        background: rgba(0, 0, 0, .4);
+        border-top: 1px solid #f8f9f9;
+    }
+
+    .small-screen-nav ul {
+        display: block;
+        text-align: center;
+        transform: translate(-100px, 0);
+    }
+
+    .visibleNav ul {
+        transform: translate(0, 0);
+        transition: all .2s linear;
+    }
+
+    .small-screen-nav li {
+        color: #333333;
+        font-size: 16px;
+        line-height: 2rem;
+        background: #FFFFFF;
     }
 
     .site-footer {

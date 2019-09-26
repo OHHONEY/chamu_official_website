@@ -32,13 +32,13 @@ module.exports = {
         new HtmlWebpackPlugin({
             title: '查姆信息产品中心',
             filename: 'products.html',
-            template: './src/products/index.html',
+            template: './src/index.html',
             chunks: ['products']
         }),
         new HtmlWebpackPlugin({
             title: '关于查姆',
             filename: 'aboutCham.html',
-            template: './src/aboutUs/index.html',
+            template: './src/index.html',
             chunks: ['aboutCham']
         })
 

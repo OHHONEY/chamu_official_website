@@ -199,6 +199,14 @@
     background-image: url('../assets/imgs/ewImg.png');
 }
 
+.price-system::before {
+    background-image: url('../assets/imgs/psImg.png')
+}
+
+.grouping::before {
+    background-image: url('../assets/imgs/groupingImg.png');
+}
+
 .instryments-problem > .easing-currence {
     opacity: 1;
     transform: translate(0, 0);
@@ -252,6 +260,7 @@
         width: 75vw;
         height: auto;
         padding: 20px 10px;
+        font-size: 16px;
     }
 
     .instryments-solution>div>div {
@@ -267,4 +276,15 @@
     .instryments-solution>div>div {
         padding: 0 0 0 30px;
     }
+
+    .photo {
+        position: relative;
+        z-index: 1;
+        left: 50%;
+        top: auto;
+        width: 4rem;
+        transform: translate(-50%, 0);
+        margin: 0 0 10px;
+    }
+
 }

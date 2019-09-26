@@ -1,5 +1,4 @@
-import template from './cloud-clinic.html'
-import './style.css'
+import template from '../../../components/header.html'
 
 export default class {
     mount(container) {

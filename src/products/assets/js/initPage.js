@@ -1,4 +1,4 @@
-import template from '../../components/index.html'
+import template from '../../index.html'
 
 import switchTab from './switchTab'
 

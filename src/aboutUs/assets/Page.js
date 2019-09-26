@@ -1,4 +1,4 @@
-import template from './index.html'
+import template from '../index.html'
 
 import newsData from '../../assets/data/newsList.json'
 import setNewsList from './js/updateNews'
